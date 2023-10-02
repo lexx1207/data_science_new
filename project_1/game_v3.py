@@ -11,8 +11,10 @@ def game_core_v3(number: int = 1) -> int:
     count = 0
     predict = np.random.randint(1, 101)
     range_number = [1,101] # Создаем список из 2 элементов которые будут являться границами при генерации числа
+    
     while number != predict:
         count += 1
+        
         if number > predict:
           range_number[0] = predict # Задаем нижнюю границу для следующей генерации числа 
           predict = np.random.randint(range_number[0], range_number[1])
